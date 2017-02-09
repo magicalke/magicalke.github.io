@@ -33,9 +33,12 @@
 
     function onaTextClick(x) {
 
-        userName = document.getElementById("userName");
-        userName.onblur = null;
-        window.location.href = "https://www.baidu.com/";
+         if (x.href == "https://www.baidu.com/") {
+
+            userName = document.getElementById("userName");
+            userName.onblur = null;
+            window.location.href = "https://www.baidu.com/";
+        }
 
     }
     </script>
