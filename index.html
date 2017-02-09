@@ -12,13 +12,41 @@
 <!DOCTYPE HTML>
 <html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    function changeText2Baidu() {
+
+        a = document.getElementById("aText")
+        a.innerHTML = "baidu ?"
+        a.href = "https://www.baidu.com/"
+
+    }
+
+    function changeText2163() {
+
+        a = document.getElementById("aText")
+        a.innerHTML = " default 163 "
+        a.href = "http://www.163.com/"
+    }
+
+    function onaTextClick(x) {
+
+        userName = document.getElementById("userName");
+        userName.onblur = null;
+        window.location.href = "https://www.baidu.com/";
+
+    }
+    </script>
+</head>
+
 <body>
-    <form  method="get">
-        User name:
-        <input type="text" name="user_name" autofocus="autofocus" />
-        <input type="submit" />
+    <form action="" method="get">
+        <input type="search" id="userName" name="user_search" placeholder="UserName" onfocus="changeText2Baidu()" onblur="changeText2163()" />
     </form>
-    <a href="https://www.baidu.com">百度</a>
+    <a href="http://www.163.com/" id="aText" onmousedown="onaTextClick(this)"> default 163 </a>
 </body>
 
 </html>
+
