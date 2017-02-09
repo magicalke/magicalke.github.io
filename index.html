@@ -16,11 +16,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
+
+    var _BAIDU = "https://www.baidu.com/";
+    var _163  = "http://www.163.com/";
+
     function changeText2Baidu() {
 
         a = document.getElementById("aText")
         a.innerHTML = "baidu ?"
-        a.href = "https://www.baidu.com/"
+        a.href = _BAIDU
 
     }
 
@@ -28,23 +32,23 @@
 
         a = document.getElementById("aText")
         a.innerHTML = " default 163 "
-        a.href = "http://www.163.com/"
+        a.href = _163
     }
 
     function onaTextClick(x) {
 
-         if (x.href == "https://www.baidu.com/") {
+        if (x.href == _BAIDU) {
 
             userName = document.getElementById("userName");
             userName.onblur = null;
-            window.location.href = "https://www.baidu.com/";
+
         }
 
     }
     </script>
 </head>
 
-<body>
+<body onpagehide="changeText2163">
     <form action="" method="get">
         <input type="search" id="userName" name="user_search" placeholder="UserName" onfocus="changeText2Baidu()" onblur="changeText2163()" />
     </form>
@@ -52,4 +56,5 @@
 </body>
 
 </html>
+
 
