@@ -1,60 +1,26 @@
-<!DOCTYPE HTML>
-<!-- <html>
+<html lang="zh-cn">
 <head>
-  <title> Find one </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link href="https://res.wx.qq.com/mpres/htmledition/images/favicon218877.ico" rel="Shortcut Icon">
 </head>
-<body bgColor="Black">
-
-  <div style="position: absolute; bottom: 10px; right: 10px;color:Azure;">刀鱼这个二逼 </div>
-
-</body>
-</html> -->
-<!DOCTYPE HTML>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-
-    var _BAIDU = "https://www.baidu.com/";
-    var _163  = "http://www.163.com/";
-
-    function changeText2Baidu() {
-
-        a = document.getElementById("aText")
-        a.innerHTML = "baidu ?"
-        a.href = _BAIDU
-
-    }
-
-    function changeText2163() {
-
-        a = document.getElementById("aText")
-        a.innerHTML = " default 163 "
-        a.href = _163
-    }
-
-    function onaTextClick(x) {
-
-        if (x.href == _BAIDU) {
-
-            userName = document.getElementById("userName");
-            userName.onblur = null;
-
-        }
-
-    }
-    </script>
-</head>
-
-<body onpageshow="changeText2163()">
-    <form action="" method="get">
-        <input type="search" id="userName" name="user_search" placeholder="UserName" onfocus="changeText2Baidu()" onblur="changeText2163()" />
-    </form>
-    <a href="http://www.163.com/" id="aText" onmousedown="onaTextClick(this)"> default 163 </a>
-</body>
-
-</html>
-
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+var o = document.getElementById;
+document.getElementById = function(a)
+{
+	if (a == "_edw_iframe_") {
+		//window.location.href="http://www.baidu.com";
+		alert("老板不要投诉了");
+		return {}
+	} else {
+		return o.call(document, a);
+	}
+}
+</script>
+111
 
